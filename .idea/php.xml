@@ -28,6 +28,9 @@
       <path value="$PROJECT_DIR$/vendor/illuminate/view" />
       <path value="$PROJECT_DIR$/vendor/illuminate/events" />
       <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
     </include_path>
   </component>
 </project>
