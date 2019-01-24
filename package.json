@@ -1,0 +1,13 @@
+{
+  "author": "Ubie Digital Arturas Bespalovas",
+  "description": "Ecomerce webstore",
+  "private": true,
+  "dependencies": {
+    "gulp": "~4.0.0",
+    "laravel-elixir": "~5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "laravel-mix": "^4.0.14"
+  }
+}
