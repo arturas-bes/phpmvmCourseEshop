@@ -13,10 +13,10 @@
 </head>
 
 <body>
-<div style="width: 600px; padding: 15px; margin: 0 auto; background-color: #5e5e5e;">
+<div style="width: 600px; padding: 1px; margin: 0 auto; background-color: #5e5e5e;">
 
     <img src="https://www.lifewire.com/thmb/MZVEienqGMq9QznHR4FN1AM9NhU=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/domenico-loia-274200-59dba1e122fa3a00116c7b33.jpg" width="150" height="187" />
-    <p>email body <?php echo $data ?></p>
+    <p>Email body <?php echo $data ?></p>
 
 </div>
 
