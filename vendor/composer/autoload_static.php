@@ -158,9 +158,11 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
     public static $classMap = array (
         'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
         'App\\Classes\\Database' => __DIR__ . '/../..' . '/app/Classes/Database.php',
+        'App\\Classes\\Errorhandler' => __DIR__ . '/../..' . '/app/Classes/Errorhandler.php',
         'App\\Classes\\Mail' => __DIR__ . '/../..' . '/app/Classes/Mail.php',
-        'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/controllers/BaseController.php',
-        'App\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/controllers/IndexController.php',
+        'App\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Controllers/Admin/DashboardController.php',
+        'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
+        'App\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/Controllers/IndexController.php',
         'App\\RoutesDispacher' => __DIR__ . '/../..' . '/app/routing/RoutesDispacher.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
