@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 19.1.24
- * Time: 14.20
- */
 
 namespace App;
 
@@ -19,7 +13,6 @@ class RoutesDispacher
     public function __construct(AltoRouter $router)
     {
         $this->match = $router->match();
-
 
         if ($this->match) {
             list($controller, $method) = explode('@', $this->match['target']);

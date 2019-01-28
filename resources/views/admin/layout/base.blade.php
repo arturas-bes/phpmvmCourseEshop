@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://use.fontawesome.com/34ae7a89dc.js"></script>
-    <link href="css/all.css" rel="stylesheet">
+    <link href="/css/all.css" rel="stylesheet">
 
 </head>
 <body>
@@ -25,7 +25,7 @@
     @yield('content')
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="js/all.js"></script>
+<script src="/js/all.js"></script>
 </body>
 
 </html>

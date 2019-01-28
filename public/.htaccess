@@ -6,3 +6,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 #Redirect all rquest to index.php
 RewriteRule . index.php [L]
+

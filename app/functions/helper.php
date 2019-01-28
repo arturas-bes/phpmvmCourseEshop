@@ -22,3 +22,16 @@ function make($filename, $data)
 
     return $content;
 }
+//// vardump
+//function d($params = array())
+//{
+//    print('<pre>');
+//    print_r($params);
+//    print('</pre>');
+//}
+//// dump die
+//function dd($params = array())
+//{
+//    dd($params);
+//    die;
+//}
