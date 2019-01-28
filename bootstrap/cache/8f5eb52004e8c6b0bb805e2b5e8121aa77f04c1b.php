@@ -16,10 +16,12 @@
                     </div>
                 </form>
             </div>
+
             <div class="small-12 medium-5 end column">
                 <form action="/admin/product/categories" method="post">
                     <div class="input-group">
-                        <input type="text" class="input-group-field"  name="name" placeholder="Search by name">
+                        <input type="text" class="input-group-field" name="name"
+                               placeholder="Category Name">
                         <input type="hidden" name="token" value="<?php echo e(\App\Classes\CSRFToken::_token()); ?>">
                         <div class="input-group-button">
                             <input type="submit" class="button" value="Create">
@@ -28,6 +30,9 @@
                 </form>
             </div>
         </div>
+        <?php if($message): ?>
+            <p><?php echo e($message); ?></p>
+            <?php endif; ?>
         <div class="row expanded">
             <div class="small-12 medium-11 column">
                 <?php if(count($categories)): ?>
@@ -37,6 +42,7 @@
                             <tr>
                                 <td><?php echo e($category->name); ?></td>
                                 <td><?php echo e($category->slug); ?></td>
+                                
                                 <td><?php echo e($category->created_at->toFormattedDateString()); ?></td>
                                 <td width="100" class="text-right">
                                     <a href="#"><i class="fa fa-edit"></i></a>

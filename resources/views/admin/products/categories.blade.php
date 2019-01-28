@@ -17,11 +17,13 @@
                     </div>
                 </form>
             </div>
+
             <div class="small-12 medium-5 end column">
                 <form action="/admin/product/categories" method="post">
                     <div class="input-group">
-                        <input type="text" class="input-group-field"  name="name" placeholder="Search by name">
-                        <input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
+                        <input type="text" class="input-group-field" name="name"
+                               placeholder="Category Name">
+                        <input type="hidden" name="token" value="{{ \App\Classes\CSRFToken::_token() }}">
                         <div class="input-group-button">
                             <input type="submit" class="button" value="Create">
                         </div>
@@ -29,6 +31,9 @@
                 </form>
             </div>
         </div>
+        @if($message)
+            <p>{{$message}}</p>
+            @endif
         <div class="row expanded">
             <div class="small-12 medium-11 column">
                 @if(count($categories))

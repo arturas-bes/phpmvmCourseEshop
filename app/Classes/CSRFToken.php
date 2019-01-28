@@ -6,7 +6,7 @@ namespace App\Classes;
 class CSRFToken
 {
     /**
-     * add session token
+     * generate token
      * @return mixed
      * @throws \Exception
      */
@@ -20,15 +20,18 @@ class CSRFToken
     }
 
     /**
-     * Verify session token
-     * @param $request
+     * verify token
+     * @param $requestToken
+     * @param bool $regenerate
      * @return bool
      * @throws \Exception
      */
-    public static function verifyCSRFToken($request)
+    public static function verifyCSRFToken($requestToken, $regenerate = true)
     {
         if (Session::has('token') && Session::get('token') === $requestToken) {
-            Session::remove('token');
+            if ($regenerate) {
+                Session::remove('token');
+            }
             return true;
         }
         return false;

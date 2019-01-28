@@ -10,9 +10,7 @@ class Category extends Model
     use SoftDeletes;
 
     public $timestamps = true;
-    protected $fillable = [
-        'name',
-        'slug'
-    ];
+    protected $fillable = ['name', 'slug'];
+
     protected $dates = ['deleted_at'];
 }
