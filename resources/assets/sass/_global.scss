@@ -1,0 +1,31 @@
+
+h2{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+.reveal{
+  border: 0;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  &:focus{
+    outline-style: none;
+  }
+
+}
+
+.notification{
+  display: none;
+  margin-top: 1.5rem;
+  ul{
+    list-style-type: none;
+  }
+}
+.fa-edit{
+  color: #35658a;
+}
+.fa-times{
+  color: #bf2b20;
+}

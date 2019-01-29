@@ -33,8 +33,7 @@ class Session
     }
 
     /**
-     * check is session exists
-     *
+     * check if sesssion exists
      * @param $name
      * @return bool
      * @throws \Exception
@@ -53,10 +52,32 @@ class Session
      * @param $name
      * @throws \Exception
      */
+
     public static function remove($name)
     {
         if (self::has($name)) {
             unset($_SESSION[$name]);
         }
+    }
+
+    /**
+     * Flash a message and unset old session
+     * @param $name
+     * @param string $value
+     * @return mixed|null
+     * @throws \Exception
+     */
+    public static function flash($name, $value = '')
+    {
+        if (self::has($name)) {
+            $old_value = self::get($name);
+            self::remove($name);
+
+            return $old_value;
+        } else {
+            self::add($name, $value);
+        }
+
+        return null;
     }
 }

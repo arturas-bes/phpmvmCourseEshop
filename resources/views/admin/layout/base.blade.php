@@ -11,7 +11,7 @@
     <link href="/css/all.css" rel="stylesheet">
 
 </head>
-<body>
+<body data-page-id="@yield('data-page-id')">
 @include('includes.admin-sidebar')
 <div class="off-canvas-content admin_title_bar" data-off-canvas-content>
     <!-- Your page content lives here -->
