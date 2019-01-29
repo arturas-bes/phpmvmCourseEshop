@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'voku\\helper\\' => array($vendorDir . '/voku/pagination/src/voku/helper'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Contracts\\' => array($vendorDir . '/symfony/contracts'),
@@ -26,6 +27,6 @@ return array(
     'Illuminate\\Container\\' => array($vendorDir . '/illuminate/container'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Common/Inflector'),
+    'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'App\\' => array($baseDir . '/app'),
-    '' => array($vendorDir . '/nesbot/carbon/src'),
 );

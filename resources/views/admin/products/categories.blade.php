@@ -31,9 +31,7 @@
                 </form>
             </div>
         </div>
-        @if($message)
-            <p>{{$message}}</p>
-            @endif
+
         <div class="row expanded">
             <div class="small-12 medium-11 column">
                 @if(count($categories))
@@ -41,10 +39,10 @@
                         <tbody>
                         @foreach($categories as $category)
                             <tr>
-                                <td>{{$category->name}}</td>
-                                <td>{{$category->slug}}</td>
+                                <td>{{$category['name']}}</td>
+                                <td>{{$category['slug']}}</td>
                                 {{--Carbon method for formatting date time toFormattedDateString() more at carbon php api--}}
-                                <td>{{$category->created_at->toFormattedDateString()}}</td>
+                                <td>{{$category['added']}}</td>
                                 <td width="100" class="text-right">
                                     <a href="#"><i class="fa fa-edit"></i></a>
                                     <a href="#"><i class="fa fa-times"></i></a>
@@ -53,9 +51,10 @@
                         @endforeach
                         </tbody>
                     </table>
+                    {!! $links !!}
                 @else
 
-                <h3>You have not created any categories</h3>
+                    <h3>You have not created any categories</h3>
 
                 @endif
 

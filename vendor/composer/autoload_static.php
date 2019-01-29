@@ -13,6 +13,10 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
     );
 
     public static $prefixLengthsPsr4 = array (
+        'v' => 
+        array (
+            'voku\\helper\\' => 12,
+        ),
         'W' => 
         array (
             'Whoops\\' => 7,
@@ -48,6 +52,10 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
             'Dotenv\\' => 7,
             'Doctrine\\Common\\Inflector\\' => 26,
         ),
+        'C' => 
+        array (
+            'Carbon\\' => 7,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -55,6 +63,10 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
     );
 
     public static $prefixDirsPsr4 = array (
+        'voku\\helper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/voku/pagination/src/voku/helper',
+        ),
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
@@ -135,14 +147,14 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
+        'Carbon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
-    );
-
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -165,6 +177,7 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
         'App\\Classes\\Request' => __DIR__ . '/../..' . '/app/Classes/Request.php',
         'App\\Classes\\Session' => __DIR__ . '/../..' . '/app/Classes/Session.php',
         'App\\Classes\\UploadFile' => __DIR__ . '/../..' . '/app/Classes/UploadFile.php',
+        'App\\Classes\\ValidateRequest' => __DIR__ . '/../..' . '/app/Classes/ValidateRequest.php',
         'App\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Controllers/Admin/DashboardController.php',
         'App\\Controllers\\Admin\\ProductCategoryController' => __DIR__ . '/../..' . '/app/Controllers/Admin/ProductCategoryController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
@@ -172,16 +185,39 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\RoutesDispacher' => __DIR__ . '/../..' . '/app/routing/RoutesDispacher.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
+        'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
+        'Carbon\\CarbonInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterface.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
+        'Carbon\\CarbonTimeZone' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonTimeZone.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'Carbon\\Factory' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Factory.php',
+        'Carbon\\FactoryImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/FactoryImmutable.php',
         'Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
+        'Carbon\\Traits\\Boundaries' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Boundaries.php',
+        'Carbon\\Traits\\Comparison' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Comparison.php',
+        'Carbon\\Traits\\Converter' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Converter.php',
+        'Carbon\\Traits\\Creator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Creator.php',
+        'Carbon\\Traits\\Date' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Date.php',
+        'Carbon\\Traits\\Difference' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Difference.php',
+        'Carbon\\Traits\\Localization' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Localization.php',
+        'Carbon\\Traits\\Macro' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Macro.php',
+        'Carbon\\Traits\\Modifiers' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Modifiers.php',
+        'Carbon\\Traits\\Mutability' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Mutability.php',
+        'Carbon\\Traits\\Options' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Options.php',
+        'Carbon\\Traits\\Rounding' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Rounding.php',
+        'Carbon\\Traits\\Serialization' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Serialization.php',
+        'Carbon\\Traits\\Test' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Test.php',
+        'Carbon\\Traits\\Timestamp' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Timestamp.php',
+        'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
+        'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Doctrine\\Common\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
         'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
         'Dotenv\\Environment\\AbstractVariables' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/AbstractVariables.php',
         'Dotenv\\Environment\\Adapter\\AdapterInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/AdapterInterface.php',
         'Dotenv\\Environment\\Adapter\\ApacheAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/ApacheAdapter.php',
+        'Dotenv\\Environment\\Adapter\\ArrayAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/ArrayAdapter.php',
         'Dotenv\\Environment\\Adapter\\EnvConstAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/EnvConstAdapter.php',
         'Dotenv\\Environment\\Adapter\\PutenvAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/PutenvAdapter.php',
         'Dotenv\\Environment\\Adapter\\ServerConstAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/ServerConstAdapter.php',
@@ -347,7 +383,6 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
         'Illuminate\\Database\\Eloquent\\RelationNotFoundException' => __DIR__ . '/..' . '/illuminate/database/Eloquent/RelationNotFoundException.php',
         'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo' => __DIR__ . '/..' . '/illuminate/database/Eloquent/Relations/BelongsTo.php',
         'Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany' => __DIR__ . '/..' . '/illuminate/database/Eloquent/Relations/BelongsToMany.php',
-        'Illuminate\\Database\\Eloquent\\Relations\\Concerns\\AsPivot' => __DIR__ . '/..' . '/illuminate/database/Eloquent/Relations/Concerns/AsPivot.php',
         'Illuminate\\Database\\Eloquent\\Relations\\Concerns\\InteractsWithPivotTable' => __DIR__ . '/..' . '/illuminate/database/Eloquent/Relations/Concerns/InteractsWithPivotTable.php',
         'Illuminate\\Database\\Eloquent\\Relations\\Concerns\\SupportsDefaultModels' => __DIR__ . '/..' . '/illuminate/database/Eloquent/Relations/Concerns/SupportsDefaultModels.php',
         'Illuminate\\Database\\Eloquent\\Relations\\HasMany' => __DIR__ . '/..' . '/illuminate/database/Eloquent/Relations/HasMany.php',
@@ -518,7 +553,6 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/illuminate/view/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/illuminate/view/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/illuminate/view/ViewServiceProvider.php',
-        'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
         'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
         'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
         'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/PHPMailer.php',
@@ -690,6 +724,8 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+        'voku\\helper\\Paginator' => __DIR__ . '/..' . '/voku/pagination/src/voku/helper/Paginator.php',
+        'voku\\helper\\PaginatorHelper' => __DIR__ . '/..' . '/voku/pagination/src/voku/helper/PaginatorHelper.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -697,7 +733,6 @@ class ComposerStaticInite5db34a196c9f01132c436835015e62e
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInite5db34a196c9f01132c436835015e62e::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInite5db34a196c9f01132c436835015e62e::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInite5db34a196c9f01132c436835015e62e::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInite5db34a196c9f01132c436835015e62e::$prefixesPsr0;
             $loader->classMap = ComposerStaticInite5db34a196c9f01132c436835015e62e::$classMap;
 

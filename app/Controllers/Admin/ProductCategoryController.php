@@ -2,7 +2,6 @@
 
 namespace App\Controllers\Admin;
 
-
 use App\Classes\CSRFToken;
 use App\Classes\Request;
 use App\Classes\ValidateRequest;
@@ -10,11 +9,15 @@ use App\Models\Category;
 
 class ProductCategoryController
 {
+    public $table_name = 'categories';
     public function show()
     {
-        $categories = Category::all();
+        $total = Category::all()->count();
+        $object = new Category;
+
+        list($categories, $links) = paginate(2, $total, $this->table_name, $object);
         // compact creates an  array which stores variables and their value
-        return view('admin/products/categories', compact('categories'));
+        return view('admin/products/categories', compact('categories', 'links'));
     }
 
     public function store()
@@ -25,12 +28,12 @@ class ProductCategoryController
 
             if (CSRFToken::verifyCSRFToken($request->token)) {
                 $rules = [
-                   'name' => [
-                       'required' => true,
-                       'maxLength' => 5,
-                       'string' => true,
-                       'unique' => 'categories'
-                   ]
+                    'name' => [
+                        'required' => true,
+                        'maxLength' => 5,
+                        'string' => true,
+                        'unique' => 'categories'
+                    ]
                 ];
                 $validate = new ValidateRequest;
                 $validate->abide($_POST, $rules);
@@ -55,4 +58,3 @@ class ProductCategoryController
         return null;
     }
 }
-

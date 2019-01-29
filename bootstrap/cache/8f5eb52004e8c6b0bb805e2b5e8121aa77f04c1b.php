@@ -30,9 +30,7 @@
                 </form>
             </div>
         </div>
-        <?php if($message): ?>
-            <p><?php echo e($message); ?></p>
-            <?php endif; ?>
+
         <div class="row expanded">
             <div class="small-12 medium-11 column">
                 <?php if(count($categories)): ?>
@@ -40,10 +38,10 @@
                         <tbody>
                         <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
-                                <td><?php echo e($category->name); ?></td>
-                                <td><?php echo e($category->slug); ?></td>
+                                <td><?php echo e($category['name']); ?></td>
+                                <td><?php echo e($category['slug']); ?></td>
                                 
-                                <td><?php echo e($category->created_at->toFormattedDateString()); ?></td>
+                                <td><?php echo e($category['added']); ?></td>
                                 <td width="100" class="text-right">
                                     <a href="#"><i class="fa fa-edit"></i></a>
                                     <a href="#"><i class="fa fa-times"></i></a>
@@ -52,9 +50,11 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </tbody>
                     </table>
+                    <?php echo $links; ?>
+
                 <?php else: ?>
 
-                <h3>You have not created any categories</h3>
+                    <h3>You have not created any categories</h3>
 
                 <?php endif; ?>
 
