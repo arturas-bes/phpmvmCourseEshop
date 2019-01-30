@@ -94,7 +94,6 @@ class ProductCategoryController
 
                 $validate = new ValidateRequest;
                 $validate->abide($_POST, $rules);
-
                 if ($validate->hasError()) {
                     $errors = $validate->getErrorMessages();
                     header('HTTP/1.1 422 Unprocessable Entity', true, 422);

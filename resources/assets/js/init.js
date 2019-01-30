@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+
     $(document).foundation();
 
     $(document).ready(function () {
@@ -8,7 +9,6 @@
             case 'home':
                 break;
             case 'AdminCategories':
-
                 ACMESTORE.admin.update();
                 ACMESTORE.admin.delete();
                 break;

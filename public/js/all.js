@@ -39,12 +39,12 @@ window.ACMESTORE = {
             let name = $(`#item-name-${id}`).val();
 
             $.ajax({
-
                 type: 'POST',
                 url: '/admin/product/categories/'+ id + '/edit',
                 data: {token: token, name: name},
                 success: function (data) {
                     let response = jQuery.parseJSON(data);
+
                     $('.notification').css("display", 'block').delay(4000).slideUp(300).html(response.success);
 
                     if ($('.notification').hasClass('alert')) {
@@ -61,9 +61,10 @@ window.ACMESTORE = {
                         li.appendChild(document.createTextNode(value));
                         ul.appendChild(li);
                     });
-                    $('.notification').css("display", 'block')
-                        .removeClass('primary').addClass('alert')
-                        .delay(6000).slideUp(300).html(ul)
+                    $('.notification').css("display", 'block').delay(6000).slideUp(300).html(ul)
+                    if ($('.notification').hasClass('primary')) {
+                        $('.notification').removeClass('primary').addClass('alert');
+                    }
                 }
             });
 
@@ -74,6 +75,7 @@ window.ACMESTORE = {
 })();
 (function () {
     'use strict';
+
     $(document).foundation();
 
     $(document).ready(function () {
@@ -82,7 +84,6 @@ window.ACMESTORE = {
             case 'home':
                 break;
             case 'AdminCategories':
-
                 ACMESTORE.admin.update();
                 ACMESTORE.admin.delete();
                 break;

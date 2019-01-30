@@ -2,7 +2,6 @@
 @section('title', 'Product Categories')
 @section('data-page-id', 'AdminCategories')
 
-
 @section('content')
     <div class="category">
         <div class="row expanded column">
@@ -28,8 +27,7 @@
                     <div class="input-group">
                         <input type="text" class="input-group-field" name="name"
                                placeholder="Category Name">
-                        <input type="hidden" name="token"
-                               data-token="{{ \App\Classes\CSRFToken::_token() }}">
+                        <input type="hidden" name="token" value="{{ \App\Classes\CSRFToken::_token() }}">
                         <div class="input-group-button">
                             <input type="submit" class="button" value="Create">
                         </div>
@@ -49,28 +47,29 @@
                                 <td>{{ $category['slug'] }}</td>
                                 <td>{{ $category['added'] }}</td>
                                 <td width="100" class="text-right">
-                                    <span style="display:inline-block;">
-                                        <a data-open="item-{{$category['id']}}"><i class="fa fa-edit"></i></a>
-                                    </span>
-                                    <span style="display:inline-block;">
-
-                                        <form method="POST"
-                                              action="/admin/product/categories/{{$category['id']}}/delete" class="delete-item">
-                                            <input type="hidden" name="token" value="{{ \App\Classes\CSRFToken::_token() }}">
-
-                                            <button type="submit"><i class="fa fa-times delete"></i></button>
-                                        </form>
-                                    </span>
+                                        <span>
+                                            <a data-open="add-category-{{$category['id']}}"><i class="fa fa-plus"></i></a>
+                                        </span>
+                                        <span>
+                                            <a data-open="item-{{$category['id']}}"><i class="fa fa-edit"></i></a>
+                                        </span>
+                                    <span style="display: inline-block">
+                                            <form method="POST" action="/admin/product/categories/{{$category['id']}}/delete"
+                                                  class="delete-item">
+                                                <input type="hidden" name="token" value="{{ \App\Classes\CSRFToken::_token() }}">
+                                                <button type="submit"><i class="fa fa-times delete"></i> </button>
+                                            </form>
+                                        </span>
 
                                     <!--Edit Category Modal -->
                                     <div class="reveal" id="item-{{$category['id']}}"
                                          data-reveal data-close-on-click="false" data-close-on-esc="false"
-                                            data-animation-in="scale-in-up" data-animation-out="scale-out-down">
+                                         data-animation-in="scale-in-up">
                                         <div class="notification callout primary"></div>
                                         <h2>Edit Category</h2>
                                         <form>
                                             <div class="input-group">
-                                                <input type="text" id="item-name-{{ $category['id'] }}"
+                                                <input type="text" id="item-name-{{$category['id']}}"
                                                        name="name" value="{{ $category['name'] }}">
                                                 <div>
                                                     <input type="submit" class="button update-category"
@@ -80,7 +79,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a href="/admin/product/categories" class="close-button" data-close aria-label="Close modal" type="button">
+                                        <a href="/admin/product/categories" class="close-button"
+                                           aria-label="Close modal" type="button">
                                             <span aria-hidden="true">&times;</span>
                                         </a>
                                     </div>
