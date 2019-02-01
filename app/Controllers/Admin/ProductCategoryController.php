@@ -7,9 +7,10 @@ use App\Classes\Redirect;
 use App\Classes\Request;
 use App\Classes\Session;
 use App\Classes\ValidateRequest;
+use App\Controllers\BaseController;
 use App\Models\Category;
 
-class ProductCategoryController
+class ProductCategoryController extends BaseController
 {
     public $table_name = 'categories';
     public $categories;
