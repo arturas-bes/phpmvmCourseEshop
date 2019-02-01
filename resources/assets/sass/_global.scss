@@ -1,4 +1,18 @@
 
+table{
+  border-collapse: collapse;
+  th, tr, td {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    border:1px solid #c0c0c0;
+  }
+}
+
+
+
+
+
+
 h2{
   font-size: 1.5rem;
   font-weight: 500;
@@ -13,7 +27,6 @@ h2{
   &:focus{
     outline-style: none;
   }
-
 }
 
 .notification{
@@ -28,4 +41,14 @@ h2{
 }
 .fa-times{
   color: #bf2b20;
+}
+.categories-container {
+  width: 95%;
+  margin: 0 auto;
+  .category-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
 }
