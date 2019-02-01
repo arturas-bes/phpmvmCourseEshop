@@ -1,0 +1,8 @@
+/.idea/*
+$ cat.gitignore
+/bootstrap/cache/*
+/public/images/*
+/public/css/all.css
+/public/js/all.js
+/.env
+
