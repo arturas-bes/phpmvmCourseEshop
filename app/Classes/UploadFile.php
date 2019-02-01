@@ -91,7 +91,7 @@ class UploadFile
      * @param $new_filename
      * @return UploadFile|null
      */
-    public static function move($temp_path, $folder, $file, $new_filename)
+    public static function move($temp_path, $folder, $file, $new_filename = '')
     {
         $fileobj = new static;
         $ds = DIRECTORY_SEPARATOR;
@@ -107,7 +107,7 @@ class UploadFile
         $fileobj->path = "{$folder}{$ds}{$file_name}";
         $absolute_path = BASE_PATH."{$ds}public{$fileobj->path}";
         if (move_uploaded_file($temp_path, $absolute_path)) {
-          return $fileobj;
+             return $fileobj;
         }
         return null;
     }

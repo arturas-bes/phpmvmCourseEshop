@@ -91,17 +91,19 @@
   @include foundation-typography;
 
   // Grids
-  @if not $flex {
-    @include foundation-grid;
-  }
-  @else {
-    @if $xy-grid {
-      @include foundation-xy-grid-classes;
-    }
-    @else {
-      @include foundation-flex-grid;
-    }
-  }
+  @include foundation-flex-grid;
+
+  //@if not $flex {
+  //  @include foundation-grid;
+  //}
+  //@else {
+  //  @if $xy-grid {
+  //    @include foundation-xy-grid-classes;
+  //  }
+  //  @else {
+  //    @include foundation-flex-grid;
+  //  }
+  //}
 
   // Generic components
   @include foundation-button;

@@ -2,7 +2,6 @@
 <?php $__env->startSection('data-page-id', 'adminCategories'); ?>
 
 <?php $__env->startSection('content'); ?>
-    <div class="categories-container">
     <div class="category">
         <div class="row expanded">
             <div class="column medium-11">
@@ -144,6 +143,7 @@
                 <h2>Product Subcategories</h2> <hr />
 
             </div>
+        </div>
 
 
 
@@ -233,8 +233,6 @@
                 <?php endif; ?>
             </div>
         </div>
-    </div>
-    </div>
     <?php echo $__env->make('includes.delete-modal', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin.layout.base', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

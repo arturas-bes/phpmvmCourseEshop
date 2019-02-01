@@ -66,6 +66,32 @@ window.ACMESTORE = {
 })();
 (function () {
     'use strict';
+    ACMESTORE.admin.changeEvent = function () {
+        $('#product-category').on('change', function () {
+            let category_id = $('#product-category' + ' option:selected').val();
+            $('#product-subcategory').html('Select Subcategory');
+
+                $.ajax({
+                    type: 'GET',
+                    url: '/admin/category/' + category_id + '/selected',
+                    data: {category_id:category_id},
+                    success: function (response) {
+                        let subcategories = jQuery.parseJSON(response);
+                        if (subcategories.length) {
+                            $.each(subcategories, function (key, value) {
+                                $('#product-subcategory').append('<option value="' + value.id +'">' + value.name + '</option>');
+                            });
+                        } else {
+                            $('#product-subcategory').append('<option value="">No record found</option>');
+
+                        }
+                    }
+                });
+        })
+    }
+})();
+(function () {
+    'use strict';
 
     ACMESTORE.admin.update = function () {
 
@@ -159,6 +185,9 @@ window.ACMESTORE = {
         //SWITCH PAGES
         switch ($("body").data("page-id")) {
             case 'home':
+                break;
+            case 'adminProduct':
+                ACMESTORE.admin.changeEvent();
                 break;
             case 'adminCategories':
                 ACMESTORE.admin.update();
